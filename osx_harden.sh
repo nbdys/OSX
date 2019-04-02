@@ -6,6 +6,8 @@ dscl . -read /Users/<username>
 dscl . -delete /Users/<username>
 
 ## Passwörter ändern
+ dscl . -passwd /Users/username
+ 
 ## Gruppen anpassen
 dscl . -list /Groups
 dscl . -list /Groups GroupMembership
