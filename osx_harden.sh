@@ -1,9 +1,15 @@
+
+# Lynis hat ein OSX Modul!!!
+
+
 # User
 dscl . -read /Users/root AuthenticationAuthority
 ## Nutzer entfernen
 dscl . -list /Users
 dscl . -read /Users/<username>
 dscl . -delete /Users/<username>
+
+# Auch mal in die /etc/passwd schauen. nur zur sicherheit, die wird eigentlich nur für lokale anmeldung im single-user-mode genutzt.
 
 ## Passwörter ändern
  dscl . -passwd /Users/username
@@ -21,9 +27,9 @@ dscl . -change /Users/clarketm PrimaryGroupID 1000 1001
 softwareupdate --list
 sudo softwareupdate -i <packagename>
 
+#updateserver sind vermutlich in der /etc/hosts auf localhost gesetzt!!!!!
 
-
-
+# Firewall einschalten! Geht dummerweise in der grafischen Oberfläche am einfachtsten: Settings-> Security->Firewall und Settings->Sharing die Dienste deaktivieren.
 # Dienste
 sudo systemsetup -getremoteappleevents
 sudo systemsetup -setremoteappleevents off
